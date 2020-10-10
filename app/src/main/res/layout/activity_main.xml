@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:id="@+id/mainLayao">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/switchesLayao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/titleLayao"
+            android:layout_marginTop="32dp" android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/camSwitchLayao"
+                app:layout_constraintTop_toBottomOf="@+id/locationSwitchLayao"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/camSwitch"
+                    android:showText="false" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.018"
+                    app:layout_constraintStart_toEndOf="@+id/camDescTextView"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+            <TextView
+                    android:text="@string/permission_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/camTitleView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/camSwitch" app:layout_constraintHorizontal_bias="0.0"
+            />
+            <TextView
+                    android:text="@string/permission_camera_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/camDescTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/camTitleView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="10dp"
+                    android:layout_marginEnd="262dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/storageSwitchLayao"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/storageSwitch"
+                    android:showText="false" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.018"
+                    app:layout_constraintStart_toEndOf="@+id/storageDescTextView"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+            <TextView
+                    android:text="@string/permission_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/storageTitleView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/storageSwitch"
+                    app:layout_constraintHorizontal_bias="0.0"
+            />
+            <TextView
+                    android:text="@string/permission_storage_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/storageDescTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/storageTitleView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="10dp"
+                    android:layout_marginEnd="262dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/locationSwitchLayao"
+                app:layout_constraintTop_toBottomOf="@+id/storageSwitchLayao"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/locationSwitch"
+                    android:showText="false" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.018"
+                    app:layout_constraintStart_toEndOf="@+id/locationDescTextView"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+            <TextView
+                    android:text="@string/permission_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/locationTitleView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/locationSwitch" app:layout_constraintHorizontal_bias="0.0"
+            />
+            <TextView
+                    android:text="@string/permission_location_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/locationDescTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/locationTitleView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="10dp"
+                    android:layout_marginEnd="262dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/phoneSwitchLayao"
+                app:layout_constraintTop_toBottomOf="@+id/camSwitchLayao"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/phoneSwitch"
+                    android:showText="false" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.018"
+                    app:layout_constraintStart_toEndOf="@+id/phoneDescTextView"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+            <TextView
+                    android:text="@string/permission_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/phoneTitleView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/phoneSwitch" app:layout_constraintHorizontal_bias="0.0"
+            />
+            <TextView
+                    android:text="@string/permission_phone_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/phoneDescTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneTitleView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="10dp"
+                    android:layout_marginEnd="262dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/contactsSwitchLayao"
+                app:layout_constraintTop_toBottomOf="@+id/phoneSwitchLayao"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/contactsSwitch"
+                    android:showText="false" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="0.018"
+                    app:layout_constraintStart_toEndOf="@+id/contactsDescTextView"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+            <TextView
+                    android:text="@string/permission_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/contactsTitleView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/contactsSwitch" app:layout_constraintHorizontal_bias="0.0"
+            />
+            <TextView
+                    android:text="@string/permission_contacts_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/contactsDescTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/contactsTitleView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="10dp"
+                    android:layout_marginEnd="262dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/titleLayao"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/switchesLayao"
+            android:layout_marginBottom="32dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/titleTextView"
+                android:text="@string/permission_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/switchesLayao" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.81" android:id="@+id/botonLayao"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+                android:text="Aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/aceptarText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.26"
+                app:layout_constraintVertical_bias="0.505" android:clickable="true"/>
+
+        <Button
+                android:text="Cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/limpiarText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/aceptarText" android:clickable="true"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
